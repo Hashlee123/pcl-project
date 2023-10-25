@@ -32,7 +32,7 @@ X_train = sc.fit_transform(X_train)
 X_test = sc.fit_transform(X_test)
 
 from sklearn.decomposition import PCA
-pca = PCA(n_components = 35)
+pca = PCA(n_components = 25)
 X_train = pca.fit_transform(X_train)
 X_test = pca.transform(X_test)
 
