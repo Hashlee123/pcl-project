@@ -36,9 +36,11 @@ pca = PCA(n_components = 5)
 X_train = pca.fit_transform(X_train)
 X_test = pca.transform(X_test)
 
-from sklearn.naive_bayes import GaussianNB
-classifier = GaussianNB()
+
+from sklearn.tree import DecisionTreeClassifier
+classifier = DecisionTreeClassifier(criterion='entropy', random_state=0)
 classifier.fit(X_train, y_train)
+
 
 
 
