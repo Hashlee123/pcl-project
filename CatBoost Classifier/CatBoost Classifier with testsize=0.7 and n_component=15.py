@@ -36,8 +36,8 @@ pca = PCA(n_components = 15)
 X_train = pca.fit_transform(X_train)
 X_test = pca.transform(X_test)
 
-from sklearn.linear_model import LogisticRegression
-classifier = LogisticRegression(random_state=0)
+from catboost import CatBoostClassifier
+classifier = CatBoostClassifier()
 classifier.fit(X_train, y_train)
 
 
